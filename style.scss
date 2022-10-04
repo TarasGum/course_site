@@ -10,7 +10,7 @@
 $dark: #161616;
 $dark-2: #444;
 $light: #fff;
-$primary: #02ffff;
+$primary: #244d4d;
 $secondary-font: 'Montserrat', sans-serif;
 $primary-font: 'DM Sans', sans-serif;
 $transition-link: color 0.5s ease;
@@ -40,37 +40,51 @@ body {
   margin: 0 auto;
 }
 
+.navbar-brand {
+  @include header(24px);
+}
+.bg-light {
+  background-color: rgba(248, 249, 250, 0) !important;
+}
+.btn-outline-success {
+  color: $primary;
+  background-color: transparent;
+  background-image: none;
+  border-color: $primary;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
 .header {
   &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     padding-top: 44px;
     padding-bottom: 27px;
     padding-top: 44px;
     padding-bottom: 27px;
   }
-  &__logo {
-    @include header(24px);
-  }
+  // &__logo {
+  //   @include header(24px);
+  // }
 
-  &__list {
-    display: flex;
-    column-gap: 50px;
-  }
+  // &__list {
+  //   display: flex;
+  //   column-gap: 50px;
+  // }
 
-  &__item a {
-    transition: $transition-link;
-    color: $dark;
-    &:hover {
-      color: $primary;
-      transition: $transition-link;
-    }
-  }
+  // &__item a {
+  //   transition: $transition-link;
+  //   color: $dark;
+  //   &:hover {
+  //     color: $primary;
+  //     transition: $transition-link;
+  //   }
+  // }
 
-  &__brgr-menu {
-    margin-left: 30px;
-  }
+  // &__brgr-menu {
+  //   margin-left: 30px;
+  // }
 }
 
 .main {
@@ -140,8 +154,10 @@ body {
     &__content {
       display: flex;
       column-gap: 50px;
+      row-gap: 40px;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       margin-top: 40px;
     }
   }
@@ -167,6 +183,7 @@ body {
 .list__wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .furniture {
@@ -306,6 +323,7 @@ body {
     padding: 100px 20px 50px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: $primary;
     column-gap: 20px;
   }
@@ -325,4 +343,4 @@ body {
   }
 }
 
-@import url(./media.scss);
+@import './media';
