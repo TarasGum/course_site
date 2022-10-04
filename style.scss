@@ -1,5 +1,5 @@
 @import url(./reset.css);
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap');
 @mixin header($fz) {
   font-family: $primary-font;
   font-style: normal;
@@ -11,8 +11,8 @@ $dark: #161616;
 $dark-2: #444;
 $light: #fff;
 $primary: #02ffff;
-$secondary-font: "Montserrat", sans-serif;
-$primary-font: "DM Sans", sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+$primary-font: 'DM Sans', sans-serif;
 $transition-link: color 0.5s ease;
 $section-margin: 140px;
 html {
@@ -254,7 +254,7 @@ body {
   &__picture-wrapper {
     position: relative;
     &::before {
-      content: "";
+      content: '';
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -264,7 +264,7 @@ body {
       top: -9px;
     }
     &::after {
-      content: "";
+      content: '';
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -324,3 +324,5 @@ body {
     color: $light;
   }
 }
+
+@import url(./media.scss);
