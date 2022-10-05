@@ -1,5 +1,5 @@
 @import url(./reset.css);
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap");
 @mixin header($fz) {
   font-family: $primary-font;
   font-style: normal;
@@ -11,8 +11,8 @@ $dark: #161616;
 $dark-2: #444;
 $light: #fff;
 $primary: #244d4d;
-$secondary-font: 'Montserrat', sans-serif;
-$primary-font: 'DM Sans', sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+$primary-font: "DM Sans", sans-serif;
 $transition-link: color 0.5s ease;
 $section-margin: 140px;
 html {
@@ -28,41 +28,21 @@ body {
   display: flex;
   flex-direction: column;
 }
-.carousel-indicators > * {
-  background-color: rgb(124, 124, 124) !important;
-}
-.carousel-indicators .active {
-  background-color: $primary !important;
-}
+
 .container {
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-.navbar-brand {
-  @include header(24px);
-}
-.bg-light {
-  background-color: rgba(248, 249, 250, 0) !important;
-}
-.btn-outline-success {
-  color: $primary;
-  background-color: transparent;
-  background-image: none;
-  border-color: $primary;
-}
-.btn-outline-success:hover {
-  color: #fff;
-  background-color: $primary;
-  border-color: $primary;
-}
 .header {
+  background-color: #fff;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
   &__container {
-    padding-top: 44px;
     padding-bottom: 27px;
-    padding-top: 44px;
-    padding-bottom: 27px;
+    padding-top: 27px;
   }
   // &__logo {
   //   @include header(24px);
@@ -86,6 +66,30 @@ body {
   //   margin-left: 30px;
   // }
 }
+.navbar-brand {
+  @include header(24px);
+}
+.bg-light {
+  background-color: rgba(248, 249, 250, 0) !important;
+}
+.form-control:focus {
+  color: $primary;
+  background-color: #fff;
+  border-color: $primary;
+  outline: 0;
+  box-shadow: 0 0 5px 0.05rem #244d4d79;
+}
+.btn-outline-success {
+  color: $primary;
+  background-color: transparent;
+  background-image: none;
+  border-color: $primary;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
 
 .main {
   flex: 1 1 auto;
@@ -101,7 +105,7 @@ body {
   }
 
   &__picture {
-    min-width: 500px;
+    min-width: 499px;
   }
 
   &__cta {
@@ -139,6 +143,11 @@ body {
     background-color: $light;
     padding: 20px 40px;
   }
+  &__button {
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 .section {
   margin-bottom: $section-margin;
@@ -161,6 +170,13 @@ body {
       margin-top: 40px;
     }
   }
+}
+
+.carousel-indicators > * {
+  background-color: rgb(124, 124, 124) !important;
+}
+.carousel-indicators .active {
+  background-color: $primary !important;
 }
 .slider {
   &__header {
@@ -271,7 +287,7 @@ body {
   &__picture-wrapper {
     position: relative;
     &::before {
-      content: '';
+      content: "";
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -281,7 +297,7 @@ body {
       top: -9px;
     }
     &::after {
-      content: '';
+      content: "";
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -341,6 +357,12 @@ body {
     margin-top: 20px;
     color: $light;
   }
+  &__link {
+    &:hover {
+      color: $light;
+    }
+    color: $light;
+  }
 }
 
-@import './media';
+@import "./media";
