@@ -1,5 +1,5 @@
 @import url(./reset.css);
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700&display=swap');
 @mixin header($fz) {
   font-family: $primary-font;
   font-style: normal;
@@ -10,9 +10,10 @@
 $dark: #161616;
 $dark-2: #444;
 $light: #fff;
+$light-2: rgb(117, 117, 117);
 $primary: #244d4d;
-$secondary-font: "Montserrat", sans-serif;
-$primary-font: "DM Sans", sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+$primary-font: 'DM Sans', sans-serif;
 $transition-link: color 0.5s ease;
 $section-margin: 140px;
 html {
@@ -287,7 +288,7 @@ body {
   &__picture-wrapper {
     position: relative;
     &::before {
-      content: "";
+      content: '';
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -297,7 +298,7 @@ body {
       top: -9px;
     }
     &::after {
-      content: "";
+      content: '';
       width: 190px;
       height: 85px;
       background-color: $primary;
@@ -335,13 +336,16 @@ body {
 }
 
 .footer {
-  &__wrapper {
+  background-color: $primary;
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 100px 20px 50px;
+  }
+  &__wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    background-color: $primary;
-    column-gap: 20px;
   }
 
   &__header {
@@ -357,12 +361,30 @@ body {
     margin-top: 20px;
     color: $light;
   }
+  &__item {
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
   &__link {
-    &:hover {
-      color: $light;
-    }
+    padding: 0;
+    margin: 0;
     color: $light;
+    &:hover {
+      color: $light-2;
+    }
+  }
+  &__copyright {
+    border-top: 1px solid $light;
+    padding-top: 13px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: $light;
+    text-align: center;
   }
 }
 
-@import "./media";
+@import './media';
