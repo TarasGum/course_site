@@ -375,6 +375,9 @@ body {
     }
   }
   &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-top: 1px solid $light;
     padding-top: 13px;
     font-family: 'DM Sans';
@@ -383,7 +386,6 @@ body {
     font-size: 18px;
     line-height: 23px;
     color: $light;
-    text-align: center;
   }
 }
 
