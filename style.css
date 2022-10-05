@@ -45,6 +45,11 @@ body {
   background-color: rgba(248, 249, 250, 0) !important;
 }
 
+.form-control {
+  margin-right: 2vw;
+  width: 40vw;
+}
+
 .form-control:focus {
   color: #244d4d;
   background-color: #fff;
@@ -64,6 +69,14 @@ body {
   color: #fff;
   background-color: #244d4d;
   border-color: #244d4d;
+}
+
+.btn-outline-success:active,
+.btn-outline-success:focus {
+  color: #fff;
+  background-color: #244d4d !important;
+  border-color: #244d4d !important;
+  box-shadow: 0 0 5px 0.05rem #244d4d !important;
 }
 
 .main {
