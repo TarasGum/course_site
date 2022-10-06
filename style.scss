@@ -10,7 +10,7 @@
 $dark: #161616;
 $dark-2: #444;
 $light: #fff;
-$light-2: rgb(117, 117, 117);
+$light-2: #757575;
 $primary: #244d4d;
 $secondary-font: 'Montserrat', sans-serif;
 $primary-font: 'DM Sans', sans-serif;
@@ -38,6 +38,8 @@ body {
 
 .header {
   background-color: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.227);
+
   position: sticky;
   top: 0px;
   z-index: 100;
@@ -166,9 +168,6 @@ body {
 .section {
   margin-bottom: $section-margin;
   .trusted {
-    &__wrapper {
-    }
-
     &__header {
       text-align: center;
       @include header(32px);
@@ -231,8 +230,6 @@ body {
 
   &__wrapper {
     padding: 30px;
-    &_sell {
-    }
   }
 
   &__describe {
@@ -421,4 +418,52 @@ body {
   }
 }
 
-@import './media';
+@media (max-width: 1059.98px) {
+  .furniture {
+    margin: 80px 15px 80px 15px;
+  }
+
+  .hero__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  .hero__container {
+    width: 100%;
+    padding: 0;
+  }
+  .hero__picture-wrapper {
+    display: none;
+  }
+  .footer__text {
+    margin-top: 30px;
+  }
+
+  .catalog__picture-wrapper {
+    margin-bottom: 40px;
+  }
+  .catalog__picture-wrapper::after,
+  .catalog__picture-wrapper::before {
+    display: none;
+  }
+  .catalog__select {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 899.98px) {
+  .furniture:not(:first-child) {
+    display: none;
+  }
+  .header__nav {
+    display: none;
+  }
+  .hero__header {
+    font-size: 50px;
+  }
+  .hero__button {
+    font-size: 20px;
+  }
+}
